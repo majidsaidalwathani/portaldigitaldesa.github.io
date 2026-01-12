@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Digital Desa Dasan Borok</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('IMG_20190902_081731364.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+        }
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.9); z-index: -1;
+        }
+        .fade-in { animation: fadeIn 0.4s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        .hidden-section { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-emerald-700 text-white p-4 shadow-lg sticky top-0 z-50 font-semibold">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-2 cursor-pointer" onclick="showSection('beranda')">
+                <h1 class="text-xl font-bold">Desa Dasan Borok</h1>
+            </div>
+            <ul class="flex space-x-4 md:space-x-6 text-xs md:text-sm">
+                <li><button onclick="showSection('beranda')" class="hover:text-emerald-300">Profil</button></li>
+                <li><button onclick="showSection('layanan')" class="hover:text-emerald-300">E-letter</button></li>
+                <li><button onclick="showSection('wisata')" class="hover:text-emerald-300">Wisata</button></li>
+                <li><button onclick="showSection('umkm')" class="hover:text-emerald-300">UMKM</button></li>
+                <li><button onclick="showSection('pajak')" class="bg-yellow-500 px-3 py-1 rounded text-emerald-900 hover:bg-yellow-400">Bayar Pajak</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="min-h-screen pb-20">
+        
+        <div id="section-beranda" class="fade-in">
+    <header class="bg-emerald-600 text-white py-16 px-4 text-center">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Portal Resmi Desa</h2>
+        <p class="opacity-90 max-w-xl mx-auto">Dasan Borok, Kecamatan Suralaga. Pusat informasi dan pelayanan administrasi masyarakat.</p>
+    </header>
+
+    <section class="container mx-auto -mt-8 px-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded-xl shadow text-center border-b-4 border-emerald-500">
+            <p class="text-2xl font-bold text-emerald-600">2.417</p>
+            <p class="text-[10px] uppercase font-bold text-gray-400">Penduduk</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow text-center border-b-4 border-emerald-500">
+            <p class="text-2xl font-bold text-emerald-600">169.29</p>
+            <p class="text-[10px] uppercase font-bold text-gray-400">Luas (Ha)</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow text-center border-b-4 border-emerald-500">
+            <p class="text-2xl font-bold text-emerald-600">4</p>
+            <p class="text-[10px] uppercase font-bold text-gray-400">Dusun</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow text-center border-b-4 border-emerald-500">
+            <p class="text-2xl font-bold text-emerald-600">Digital</p>
+            <p class="text-[10px] uppercase font-bold text-gray-400">Status Desa</p>
+        </div>
+    </section>
+
+    <section class="container mx-auto py-16 px-4">
+        <div class="text-center mb-10">
+            <h3 class="text-2xl font-bold text-gray-800">Galeri Desa Dasan Borok</h3>
+            <p class="text-gray-500 text-sm">Dokumentasi keindahan dan kegiatan masyarakat desa</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="group relative overflow-hidden rounded-2xl h-64 shadow-lg">
+                <img src="DES DARI DRONE.jpg" alt="Pemandangan Drone" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white text-sm font-semibold">Pemandangan Drone Desa</p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl h-64 shadow-lg">
+                <img src="KANTOR DESA.jpg" alt="Kantor Desa" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white text-sm font-semibold">Kantor Pemerintah Desa</p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl h-64 shadow-lg">
+                <img src="sawah.jpg" alt="Sawah Desa" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white text-sm font-semibold">Sektor Pertanian Unggulan</p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl h-64 shadow-lg md:col-span-2">
+                <img src="KEGIATAN DESA.jpg" alt="Kegiatan Desa" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white text-sm font-semibold">Musyawarah Desa</p>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl h-64 shadow-lg">
+                <img src="masjid.jpg" alt="Fasilitas Umum" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <p class="text-white text-sm font-semibold">Fasilitas Peribadatan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+        <div id="section-layanan" class="hidden-section fade-in container mx-auto py-10 px-4 max-w-xl">
+            <div class="bg-white rounded-2xl shadow-xl p-8 border border-emerald-100">
+                <h3 class="text-2xl font-bold text-emerald-800 mb-6 border-b pb-2">Pengajuan Surat Online</h3>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Nama Lengkap" class="w-full p-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-emerald-500">
+                    <input type="number" placeholder="NIK (16 Digit)" class="w-full p-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-emerald-500">
+                    <select class="w-full p-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-emerald-500 bg-white">
+                        <option>SKTM</option><option>Surat Tanah</option><option>Surat Jual Beli</option>
+                    </select>
+                    <textarea placeholder="Keperluan" class="w-full p-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+                    <button class="w-full bg-emerald-600 text-white font-bold py-3 rounded-lg hover:bg-emerald-700 transition">Kirim Pengajuan</button>
+                </form>
+            </div>
+        </div>
+
+       <div id="section-wisata" class="hidden-section fade-in container mx-auto py-12 px-4">
+    <div class="text-center mb-12">
+        <h3 class="text-4xl font-black text-emerald-900">Eksplorasi Dasan Borok</h3>
+        <p class="text-gray-500 mt-2 max-w-2xl mx-auto">Menyusuri setiap sudut desa, mulai dari gemuruh gendang hingga hijaunya persawahan yang menenangkan jiwa.</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button class="px-6 py-2 bg-emerald-700 text-white rounded-full shadow-md font-bold text-sm">Semua</button>
+        <button class="px-6 py-2 bg-white text-emerald-700 border border-emerald-200 rounded-full font-bold text-sm hover:bg-emerald-50">Seni Budaya</button>
+        <button class="px-6 py-2 bg-white text-emerald-700 border border-emerald-200 rounded-full font-bold text-sm hover:bg-emerald-50">Alam</button>
+        <button class="px-6 py-2 bg-white text-emerald-700 border border-emerald-200 rounded-full font-bold text-sm hover:bg-emerald-50">Tradisi</button>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="group relative overflow-hidden rounded-[2.5rem] shadow-xl bg-white">
+            <img src="GENDANG BLEK.jpg" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                <span class="bg-yellow-400 text-emerald-900 text-[10px] font-black px-3 py-1 rounded-full w-fit mb-3">SENI PERTUNJUKAN</span>
+                <h4 class="text-white text-2xl font-bold">Gendang Belek</h4>
+                <p class="text-emerald-100 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Musik kolosal penyambut tamu agung dan ksatria desa.</p>
+            </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-[2.5rem] shadow-xl bg-white">
+            <img src="HADROH.jpg" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                <span class="bg-yellow-400 text-emerald-900 text-[10px] font-black px-3 py-1 rounded-full w-fit mb-3">SENI RELIGI</span>
+                <h4 class="text-white text-2xl font-bold">Musik Hadroh</h4>
+                <p class="text-emerald-100 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Simbol keharmonisan spiritualitas masyarakat Dasan Borok.</p>
+            </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-[2.5rem] shadow-xl bg-white">
+            <img src="sawah.jpg" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                <span class="bg-yellow-400 text-emerald-900 text-[10px] font-black px-3 py-1 rounded-full w-fit mb-3">ALAM</span>
+                <h4 class="text-white text-2xl font-bold">Agrowisata Sawah</h4>
+                <p class="text-emerald-100 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Bentangan sawah hijau yang memanjakan mata di pagi hari.</p>
+            </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-[2.5rem] shadow-xl bg-white">
+            <img src="adat nyorong.jpg" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                <span class="bg-yellow-400 text-emerald-900 text-[10px] font-black px-3 py-1 rounded-full w-fit mb-3">TRADISI</span>
+                <h4 class="text-white text-2xl font-bold">Adat Nyorong</h4>
+                <p class="text-emerald-100 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Prosesi adat kekeluargaan yang masih kental di Dasan Borok.</p>
+            </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-[2.5rem] shadow-xl bg-white">
+            <img src="nyongkolanjpg.jpg" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                <span class="bg-yellow-400 text-emerald-900 text-[10px] font-black px-3 py-1 rounded-full w-fit mb-3">TRADISI NYONGKLAN</span>
+                <h4 class="text-white text-2xl font-bold">Adat nyongkolan</h4>
+                <p class="text-emerald-100 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Dilaksanakan setiap ada salah satu warga menikah.</p>
+            </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-[2.5rem] shadow-xl bg-white">
+            <img src="presean.jpg" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                <span class="bg-yellow-400 text-emerald-900 text-[10px] font-black px-3 py-1 rounded-full w-fit mb-3">PERMAINAN RAKYAT</span>
+                <h4 class="text-white text-2xl font-bold">adat presean</h4>
+                <p class="text-emerald-100 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Kelestarian permainan tradisional di kalangan pemuda desa.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-16 bg-emerald-50 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between border border-emerald-100">
+        <div class="mb-4 md:mb-0">
+            <h5 class="text-xl font-bold text-emerald-900">Ingin Berkunjung atau Meliput Kesenian Kami?</h5>
+            <p class="text-emerald-700 text-sm">Hubungi Pokdarwis (Kelompok Sadar Wisata) Desa Dasan Borok.</p>
+        </div>
+        <button class="bg-emerald-700 text-white px-8 py-3 rounded-2xl font-bold hover:bg-emerald-800 transition shadow-lg">Hubungi Kami</button>
+    </div>
+</div>
+      <div id="section-umkm" class="hidden-section fade-in container mx-auto py-12 px-4">
+    <div class="text-center mb-12">
+        <h3 class="text-3xl font-bold text-gray-800">UMKM Desa Dasan Borok</h3>
+        <p class="text-gray-500 mt-2">Dukung ekonomi lokal dengan membeli produk unggulan warga desa kami</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition group">
+            <div class="relative">
+                <img src="PRODUK_KRIPIK.jpg" alt="Kripik" class="w-full h-48 object-cover">
+                <span class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] px-2 py-1 rounded-md font-bold uppercase">Makanan</span>
+            </div>
+            <div class="p-5">
+                <h4 class="font-bold text-lg">Kripik Singkong Gurih</h4>
+                <p class="text-sm text-gray-500 mt-1">Oleh-oleh renyah asli Dasan Borok.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-emerald-600 font-black">Rp 15.000</span>
+                    <button class="bg-emerald-600 text-white px-3 py-1 rounded text-xs">Pesan</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+            <div class="relative">
+                <img src="PRODUK_ANYAMAN.jpg" alt="Anyaman" class="w-full h-48 object-cover">
+                <span class="absolute top-3 left-3 bg-blue-500 text-white text-[10px] px-2 py-1 rounded-md font-bold uppercase">Kerajinan</span>
+            </div>
+            <div class="p-5">
+                <h4 class="font-bold text-lg">Tas Anyaman Bambu</h4>
+                <p class="text-sm text-gray-500 mt-1">Karya tangan pengrajin dusun lokal.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-emerald-600 font-black">Rp 75.000</span>
+                    <button class="bg-emerald-600 text-white px-3 py-1 rounded text-xs">Pesan</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+            <div class="relative">
+                <img src="PRODUK_BERAS.jpg" alt="Beras" class="w-full h-48 object-cover">
+                <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] px-2 py-1 rounded-md font-bold uppercase">Pertanian</span>
+            </div>
+            <div class="p-5">
+                <h4 class="font-bold text-lg">Beras Organik Suralaga</h4>
+                <p class="text-sm text-gray-500 mt-1">Beras sehat langsung dari sawah desa.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-emerald-600 font-black">Rp 12.000/kg</span>
+                    <button class="bg-emerald-600 text-white px-3 py-1 rounded text-xs">Pesan</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+            <div class="relative">
+                <img src="PRODUK_KAOS.jpg" alt="Kaos Desa" class="w-full h-48 object-cover">
+                <span class="absolute top-3 left-3 bg-purple-500 text-white text-[10px] px-2 py-1 rounded-md font-bold uppercase">Konveksi</span>
+            </div>
+            <div class="p-5">
+                <h4 class="font-bold text-lg">Kaos Sablon Custom</h4>
+                <p class="text-sm text-gray-500 mt-1">Terima pesanan kaos komunitas & satuan.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-emerald-600 font-black">Rp 85.000</span>
+                    <button class="bg-emerald-600 text-white px-3 py-1 rounded text-xs">Pesan</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+            <div class="relative">
+                <img src="JASA_LAS.jpg" alt="Bengkel Las" class="w-full h-48 object-cover">
+                <span class="absolute top-3 left-3 bg-red-500 text-white text-[10px] px-2 py-1 rounded-md font-bold uppercase">Jasa</span>
+            </div>
+            <div class="p-5">
+                <h4 class="font-bold text-lg">Bengkel Las Maju</h4>
+                <p class="text-sm text-gray-500 mt-1">Pembuatan pagar, kanopi, dan tralis besi.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-emerald-600 font-black">Mulai Rp 200rb</span>
+                    <button class="bg-emerald-600 text-white px-3 py-1 rounded text-xs">Hubungi</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition">
+            <div class="relative">
+                <img src="PRODUK_KOPI.jpg" alt="Kopi" class="w-full h-48 object-cover">
+                <span class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] px-2 py-1 rounded-md font-bold uppercase">Makanan</span>
+            </div>
+            <div class="p-5">
+                <h4 class="font-bold text-lg">Kopi Bubuk Tradisional</h4>
+                <p class="text-sm text-gray-500 mt-1">Kopi hitam murni hasil sangrai manual.</p>
+                <div class="flex justify-between items-center mt-4">
+                    <span class="text-emerald-600 font-black">Rp 25.000</span>
+                    <button class="bg-emerald-600 text-white px-3 py-1 rounded text-xs">Pesan</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+        <div id="section-pajak" class="hidden-section fade-in container mx-auto py-10 px-4 max-w-md">
+            <div class="bg-white rounded-2xl shadow-xl p-8 border-t-8 border-yellow-500">
+                <h3 class="text-2xl font-bold mb-2">Cek Pajak PBB</h3>
+                <p class="text-sm text-gray-500 mb-6">Masukkan Nomor Objek Pajak (NOP) Anda</p>
+                <div class="space-y-4">
+                    <input type="text" placeholder="52.03.xxx.xxx.xxx.xxxx.x" class="w-full p-4 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-yellow-500">
+                    <button class="w-full bg-yellow-500 text-emerald-900 font-black py-4 rounded-xl hover:bg-yellow-400 transition shadow-lg">CEK TAGIHAN</button>
+                </div>
+                <div class="mt-6 p-4 bg-gray-50 rounded-lg text-xs text-gray-500 italic">
+                    *Layanan ini mempermudah warga mengecek tagihan Pajak Bumi dan Bangunan secara mandiri.
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function showSection(id) {
+            // Daftar semua ID section
+            const sections = ['beranda', 'layanan', 'wisata', 'umkm', 'pajak'];
+            
+            sections.forEach(sec => {
+                const el = document.getElementById('section-' + sec);
+                if(sec === id) {
+                    el.classList.remove('hidden-section');
+                    el.classList.add('fade-in');
+                } else {
+                    el.classList.add('hidden-section');
+                    el.classList.remove('fade-in');
+                }
+            });
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
